@@ -1,7 +1,7 @@
 import os
 import hashlib
 import shutil
-
+import re  # Importer re-modulen
 
 def hash_file(file_path):
     """Return the SHA-1 hash of the file."""
