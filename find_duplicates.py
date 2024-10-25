@@ -1,7 +1,6 @@
 import os
 import hashlib
 import shutil
-import re
 
 
 def hash_file(file_path):
@@ -46,7 +45,9 @@ def find_duplicates(folder_path):
 
 
 if __name__ == "__main__":
-    downloads_folder = os.path.expanduser('~/Downloads')
+    downloads_folder = os.path.expanduser('~/Nedlastinger')
+    if not os.path.isdir(downloads_folder):
+        downloads_folder = os.path.expanduser('~/Downloads')
 
     if not os.path.isdir(downloads_folder):
         print(f"The specified path {downloads_folder} is not a directory.")
